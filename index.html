@@ -5,18 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
     <title>Star Wars API</title>
   </head>
   <body>
-    <main>
-      <div>
-        <h1>Star Wars</h1>
+    <main class="main">
+      <h1 class="title">Star Wars Character Generator</h1>
+      <div class="container">
+        <button class="button button-generate" onclick="randomCharacter()">
+          Generate
+        </button>
+        <!-- <button class="button button-clear">Clear</button> -->
+        <div class="results-container">
+          <h1 class="name"></h1>
+          <div class="attribute-container">
+            <p class="birth-year"></p>
+            <p class="gender"></p>
+            <p class="height"></p>
+            <p class="weight"></p>
+            <p class="home-planet"></p>
+          </div>
+        </div>
+        <span></span>
       </div>
-      <div></div>
-      <footer>
-        <p></p>
-        <a href=""><i></i></a>
-      </footer>
     </main>
+    <footer class="footer">
+      <p></p>
+      <a href=""><i></i></a>
+    </footer>
   </body>
 </html>
