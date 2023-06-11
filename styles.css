@@ -1,0 +1,134 @@
+:root {
+  --green: #2ff924;
+  --brown: #381010;
+  --black: #0b0303;
+  --light-brown: #7e7863;
+  --yellow: #ffe81f;
+  --blue: #2e67f8;
+  --button-yellow: #b58a4b;
+  --white: #eaeef2;
+}
+
+/* General CSS */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: 'Star Wars', sans-serif;
+}
+
+p {
+  letter-spacing: 2px;
+}
+
+.main {
+  max-width: 120rem;
+  position: relative;
+}
+
+/* MAIN */
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+/* Title */
+.title {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.yellow-char {
+  color: var(--yellow);
+}
+
+.title,
+.description {
+  display: inline-block;
+  position: relative;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 5px;
+  bottom: -10px;
+  left: 0;
+  background-color: var(--blue);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+  border-radius: 7px 7px 2px 2px;
+  box-shadow: 8px 8px 20px 8px var(--blue);
+}
+
+.title:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Button */
+.button {
+  background-color: var(--yellow);
+  border: none;
+  border-radius: 15px;
+  color: var(--black);
+  cursor: pointer;
+  display: inline-block;
+  font-family: inherit;
+  opacity: 0.6;
+  padding: 1rem 2rem;
+  text-align: center;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.button:active {
+  background-color: var(--blue);
+  box-shadow: 0 10px var(--white);
+  color: var(--white);
+  transform: translateY(4px);
+}
+
+.button:hover {
+  box-shadow: 5px 10px 20px 5px var(--yellow);
+  opacity: 1;
+}
+
+/* Results container */
+.results-container {
+  background-color: var(--white);
+  color: var(--black);
+  padding: 2rem 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.name {
+  font-size: 2rem;
+}
+
+.attribute-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
