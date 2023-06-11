@@ -5,19 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="queries.css" />
+    <link href="https://fonts.cdnfonts.com/css/star-wars" rel="stylesheet" />
     <script src="script.js" defer></script>
     <title>Star Wars API</title>
   </head>
   <body>
     <main class="main">
-      <h1 class="title">Star Wars Character Generator</h1>
+      <h1 class="title">
+        St<span class="yellow-char">a</span>r W<span class="yellow-char">a</span
+        >rs
+      </h1>
+      <p class="quote">May the Force be with you...</p>
+      <button class="button button-generate" onclick="randomCharacter()">
+        Generate
+      </button>
       <div class="container">
-        <button class="button button-generate" onclick="randomCharacter()">
-          Generate
-        </button>
         <!-- <button class="button button-clear">Clear</button> -->
         <div class="results-container">
-          <h1 class="name"></h1>
+          <h2 class="name"></h2>
           <div class="attribute-container">
             <p class="birth-year"></p>
             <p class="gender"></p>
