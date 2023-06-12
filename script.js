@@ -7,7 +7,12 @@ let birthYear = document.querySelector('.birth-year');
 let gender = document.querySelector('.gender');
 let height = document.querySelector('.height');
 let weight = document.querySelector('.weight');
+let hair = document.querySelector('.hair-color');
+let eyeColor = document.querySelector('.eye-color');
+let skin = document.querySelector('.skin-color');
 let home = document.querySelector('.home-planet');
+let year = document.querySelector('.year');
+let currentYear = new Date().getFullYear();
 
 async function generateCharacter() {
   let randomNumber = Math.floor(Math.random() * 83) + 1;
@@ -27,8 +32,11 @@ async function generateCharacter() {
     charName.innerText = result.name;
     birthYear.innerHTML = `<span class="attribute"> Birth Year:</span> ${result.birth_year}`;
     gender.innerHTML = `<span class="attribute"> Gender: </span> ${charGender}`;
-    height.innerHTML = `<span class="attribute"> Height: </span> ${result.height}cm`;
-    weight.innerHTML = `<span class="attribute"> Mass: </span> ${result.mass}kg`;
+    height.innerHTML = `<span class="attribute"> Height: </span> ${result.height} cm`;
+    weight.innerHTML = `<span class="attribute"> Mass: </span> ${result.mass} kg`;
+    hair.innerHTML = `<span class="attribute"> Hair: </span> ${result.hair_color}`;
+    eyeColor.innerHTML = `<span class="attribute"> Eyes: </span> ${result.eye_color}`;
+    skin.innerHTML = `<span class="attribute"> Skin: </span> ${result.skin_color}`;
     return planetName;
   } catch (error) {
     alert('there was an error fetching the data');
@@ -48,3 +56,5 @@ async function getPlanet(planetUrl) {
     alert('there was an error fetching the data');
   }
 }
+
+year.textContent = currentYear;
