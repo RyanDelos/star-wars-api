@@ -132,7 +132,7 @@ p {
 /* Results container */
 
 .container {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .results-container {
@@ -169,13 +169,10 @@ p {
   bottom: 0;
   width: 100%;
   padding: 1rem;
+  font-size: 0.75rem;
 }
 
 .footer-box {
   display: flex;
   gap: 10rem;
-}
-
-.fa-robot-astromech {
-  color: aliceblue;
 }
